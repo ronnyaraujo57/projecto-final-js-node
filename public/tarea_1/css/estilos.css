@@ -1,0 +1,26 @@
+.container{
+    width: 95%;
+    height: 800px;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    padding: 10px;
+    background-color:white;
+    border-radius: 10px;
+}
+
+table, th, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+p{
+    text-indent: 30px;
+    font-size: 18px;
+}
+
+img{
+    padding: 5px;
+    border-radius: 30%;
+    width: 125px;
+}

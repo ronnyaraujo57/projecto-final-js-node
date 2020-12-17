@@ -1,0 +1,55 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.caja{
+	width: 300px;
+	padding: 40px;
+	position: absolute;
+	margin: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	border: 2px solid black;
+}
+.caja input[type="submit"]{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	padding: 14px 40px;
+	outline: none;
+	border-radius: 20px;
+	transition: 0.25s;
+	cursor: pointer;
+	border: 2px solid black;
+}
+.caja input[type="text"]{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align:  center;
+	border: 2px solid black;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	border-radius: 24px;
+	transition: 0.25s;
+}
+.caja input[name="numeros"]:focus{
+	width: 250px;
+	border-color: #6F6F6F;
+}
+.caja input[type="submit"]:hover{
+	background: #2ecc71;
+	color: black;
+}
+span {
+    display: block;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
