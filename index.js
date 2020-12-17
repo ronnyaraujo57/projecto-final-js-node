@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const http = require('http');
-const controller = require('./controller');
+const controller = require('./lib/controller');
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -11,9 +11,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Handle requests
-app.post('api/login', controller.login);
+app.post('/api/login', controller.login);
 
-app.post('api/user', controller.createUser);
+app.post('/api/register', controller.createUser);
+
+app.post('/', (req, res) => {
+  res.json({
+    success: true,
+    status: 'App running...'
+  });
+});
 
 const port = 3030;
 
