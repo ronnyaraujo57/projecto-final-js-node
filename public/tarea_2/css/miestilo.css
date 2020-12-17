@@ -1,0 +1,55 @@
+header{
+	display: block;
+}
+
+section{
+	display: block;	
+}
+
+footer{
+	display: block;
+	clear: both;
+}
+
+table, th, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th, td{
+	padding: 5px;
+}
+
+tr:nth-child(even){
+	background-color: #CECDD8;
+}
+
+.paginacion{
+	margin: 20px;
+}
+
+.paginacion ul{
+	list-style: none;
+	text-align: center;
+}
+
+.paginacion ul li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.paginacion ul li a{
+	display: block;
+	padding: 10px 20px;
+	color: #fff;
+	background-color: #024959;
+	text-decoration: none;
+}
+
+.paginacion ul li a:hover{
+	background-color: #037E8C;
+}
+
+.paginacion ul li .active{
+	background-color: #037E8C;
+	font-weight: bold;
+}

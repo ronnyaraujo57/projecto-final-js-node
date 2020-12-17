@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilo.css">
+	<title>Generador QR</title>
+</head>
+<body>
+	<div class="contenedor">
+		<form id="form">
+			<h1>Formulario</h1>
+			<label>Nombre Completo: <input id="nombre" placeholder="Nombre" autocomplete="off" type="text" required></label>
+			<label>Empresa donde labora: <input id="empresa" placeholder="Emplesa" autocomplete="off"type="text" required></label>
+			<label></label>
+			<label>Cargo: <input id="cargo" placeholder="Cargo" autocomplete="off" type="text" required></label>
+			<label></label>
+			<label>Teléfono Móvil: <input id="telefono_m" placeholder="000-000-0000" autocomplete="off" type="text" required></label>
+			<label></label>
+			<label>Teléfono Hogar: <input id="telefono_h" placeholder="000-000-0000 (opcional)" autocomplete="off" type="text"></label>
+			<label></label>
+			<label>Correo Personal: <input id="email-personal" placeholder="ejemplo@gmail.com" autocomplete="off" type="email" required></label>
+			<label>Correo Institucional: <input id="email-insti" placeholder="ejemplo@gmail.com (opcional)" autocomplete="off" type="email"></label>
+			<input id="enviar" value="Generar" type="submit">
+		</form>
+		<div class="contenedorQR">
+	        <img src="default.png" alt="QR generador">
+	    </div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>

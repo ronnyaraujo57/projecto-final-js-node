@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilo.css">
+	<title>Formulario Multiple</title>
+</head>
+<body>
+	<form id="formulario">
+		<div class="container">
+			<!--Formulario Pag.1-->
+			<div class="tabBody">
+				<h1>Datos Personales</h1>
+				Nombre: <input id="nombre" type="text" placeholder="nombre" required><br>
+				Edad: <input id="edad" type="text" placeholder="edad" required><br>
+				cedula: <input id="cedula" type="text" placeholder="cedula" required><br>
+				Nacionalidad: <input id="nacionalida" placeholder="nacionalidad" type="text" required=""><br>
+				<input type="button" value="Siguiente" onclick="tab(1,'next')">
+			</div>
+			<!--Formulario Pag.2-->
+			<div class="tabBody" style="display: none">
+				<h1>Familiares</h1>
+				Nombre: <input id="nombre" type="text" placeholder="nombre" required><br>
+				Parentezco: <input id="parentezco" type="text" placeholder="parentezco" required><br>
+				Edad: <input id="edad" type="text" placeholder="edad" required><br>
+				<input type="button" value="Atras" onclick="tab(0,'back')">
+				<input type="button" value="Siguiente" onclick="tab(2,'next')">
+			</div>
+			<!--Formulario Pag.3-->
+			<div class="tabBody" style="display: none">
+				<h1>Condiciones Pre-Existentes de Salud</h1>
+				Enfermedad: <input id="nombre" type="text" placeholder="nombre" required><br>
+				Tiempo Padeciendo: <input id="edad" type="text" placeholder="edad" required><br>
+				<input type="button" value="Atras" onclick="tab(1,'back')">
+				<input type="button" value="Siguiente" onclick="tab(3,'next')">
+			</div>
+			<!--Formulario Pag.4-->
+			<div class="tabBody" style="display: none">
+				<h1>Internamientos Realizados</h1>
+				Fecha: <input id="nombre" type="text" placeholder="nombre" required><br>
+				Centro Médico: <input id="edad" type="text" placeholder="edad" required><br>
+				Diagnóstico: <input id="cedula" type="text" placeholder="cedula" required><br>
+				<input type="button" value="Atras" onclick="tab(2,'back')">
+				<input type="submit" value="Enviar">
+			</div>
+		</div>
+		<!-- Ubicacion -->
+        <div id="ubicacion">
+            <span class="indicador activo"></span>
+            <span class="indicador"></span>
+            <span class="indicador"></span>
+            <span class="indicador"></span>
+        </div>
+	</form>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

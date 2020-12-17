@@ -1,0 +1,53 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.contenedor{
+	width: 300px;
+	padding: 40px;
+	position: absolute;
+	margin: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	border: 2px solid black;
+}
+.contenedor input[id="enviar"]{
+	border: 0;
+	background: #9C9191;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	padding: 14px 40px;
+	outline: none;
+	border-radius: 20px;
+	transition: 0.25s;
+	cursor: pointer;
+	border: 1px solid black;
+}
+
+.contenedor input[id="enviar"]:hover{
+	background: #6E6067;
+	color: black;
+}
+
+.contenedor input[type="text"],
+.contenedor input[type="email"]
+{
+	outline: none;
+	box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+    color: #555;
+}
+
+.contenedorQR {
+    text-align: center;
+    margin-top: 5%;
+    border: 1px dashed #43D1AF;
+    padding: 1rem;
+}

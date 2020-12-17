@@ -1,0 +1,29 @@
+#formulario{
+	padding: 2%;
+	margin: 0.5rem 4rem;
+}
+.indicador {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: blue;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.2;
+  }
+
+.activo{
+  	opacity: 1;
+  }
+
+.container .tabBody {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+}
+
+#ubicacion {
+    text-align: center;
+    margin-top: 40px;
+}
