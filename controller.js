@@ -38,8 +38,6 @@ function createUser(req, res) {
     console.log({ result });
     res.json({ success: true, user: result.pop() });
   });
-
-  res.send({ created: true });
 }
 
 module.exports = {
