@@ -19,11 +19,26 @@ function login(req, res) {
 
     res.json({ success: true, user });
   });
-  
-  // res.send({testing: true});
 }
 
 function createUser(req, res) {
+  const { nombre, username, password } = req.body;
+
+  mysql.query(`INSERT INTO users (nombre, username, user_password) values(${nombre}, ${username}, ${password})`, (err, result) => {
+    if (err) {
+      console.log({ err });
+      
+      return res.status(500).json({
+        success: false,
+        message: 'Unexpected error',
+        error: err
+      });
+    }
+
+    console.log({ result });
+    res.json({ success: true, user: result.pop() });
+  });
+
   res.send({ created: true });
 }
 
