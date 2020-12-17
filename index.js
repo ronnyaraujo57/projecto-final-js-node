@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
   });
 });
 
-const port = 3030;
+const port = process.env.PORT || 3030;
 
 http.createServer(app).listen(port, () => {
   console.log('Back on port: ', port);
