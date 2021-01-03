@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/estilo.css">
 	<title>Formulario Multiple</title>
 </head>
@@ -12,37 +13,38 @@
 			<!--Formulario Pag.1-->
 			<div class="tabBody">
 				<h1>Datos Personales</h1>
-				Nombre: <input id="nombre" type="text" placeholder="nombre" required><br>
-				Edad: <input id="edad" type="text" placeholder="edad" required><br>
-				cedula: <input id="cedula" type="text" placeholder="cedula" required><br>
-				Nacionalidad: <input id="nacionalida" placeholder="nacionalidad" type="text" required=""><br>
+				Nombre: <input id="datosPersonales" type="text" placeholder="nombre" required><br>
+				Apellido: <input id="datosPersonales" type="text" placeholder="apellido" required><br> 
+				Edad: <input id="datosPersonales" type="text" placeholder="edad" required><br>
+				cedula: <input id="datosPersonales" type="text" placeholder="cedula" required><br>
+				Nacionalidad: <input id="datosPersonales" placeholder="nacionalidad" type="text" required=""><br>
 				<input type="button" value="Siguiente" onclick="tab(1,'next')">
 			</div>
 			<!--Formulario Pag.2-->
 			<div class="tabBody" style="display: none">
 				<h1>Familiares</h1>
-				Nombre: <input id="nombre" type="text" placeholder="nombre" required><br>
-				Parentezco: <input id="parentezco" type="text" placeholder="parentezco" required><br>
-				Edad: <input id="edad" type="text" placeholder="edad" required><br>
+				Nombre: <input id="datosPersonales" type="text" placeholder="nombre" required><br>
+				Parentezco: <input id="datosPersonales" type="text" placeholder="parentezco" required><br>
+				Edad: <input id="datosPersonales" type="text" placeholder="edad" required><br>
 				<input type="button" value="Atras" onclick="tab(0,'back')">
 				<input type="button" value="Siguiente" onclick="tab(2,'next')">
 			</div>
 			<!--Formulario Pag.3-->
 			<div class="tabBody" style="display: none">
 				<h1>Condiciones Pre-Existentes de Salud</h1>
-				Enfermedad: <input id="nombre" type="text" placeholder="nombre" required><br>
-				Tiempo Padeciendo: <input id="edad" type="text" placeholder="edad" required><br>
+				Enfermedad: <input id="condicionSalud" type="text" placeholder="enfermedad" required><br>
+				Tiempo Padeciendo: <input id="condicionSalud" type="text" placeholder="tiempo padeciendo" required><br>
 				<input type="button" value="Atras" onclick="tab(1,'back')">
 				<input type="button" value="Siguiente" onclick="tab(3,'next')">
 			</div>
 			<!--Formulario Pag.4-->
 			<div class="tabBody" style="display: none">
 				<h1>Internamientos Realizados</h1>
-				Fecha: <input id="nombre" type="text" placeholder="nombre" required><br>
-				Centro Médico: <input id="edad" type="text" placeholder="edad" required><br>
-				Diagnóstico: <input id="cedula" type="text" placeholder="cedula" required><br>
+				Fecha: <input id="internamientos" type="text" placeholder="fecha" required><br>
+				Centro Médico: <input id="internamientos" type="text" placeholder="centro médico" required><br>
+				Diagnóstico: <input id="internamientos" type="text" placeholder="cedula" required><br>
 				<input type="button" value="Atras" onclick="tab(2,'back')">
-				<input type="submit" value="Enviar">
+				<input type="button" value="Enviar" onclick="agregar_fila()">
 			</div>
 		</div>
 		<!-- Ubicacion -->
@@ -53,6 +55,26 @@
             <span class="indicador"></span>
         </div>
 	</form>
+	<div class="container text-center">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Nacionalidad</th>
+                <th scope="col">Cedula</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Familiares</th>
+                <th scope="col">Condiciones</th>
+                <th scope="col">Internados</th>
+              </tr>
+            </thead>
+            <tbody id="tablaDinamica">
+            	
+            </tbody>
+          </table>
+    </div>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
